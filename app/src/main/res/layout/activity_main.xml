@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:custom="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white">
+
+
+    <LinearLayout android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <customfonts.Medium_Textview
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:padding="16dp"
+                android:textColor="@color/dark_text"
+                android:text="Aqua Dry"
+                android:textSize="17dp"
+                android:src="@drawable/btn"
+                android:textStyle="bold" android:id="@+id/medium_Textview"/>
+
+            <ImageView android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@drawable/search"
+                android:layout_margin="8dp"
+                android:layout_gravity="center"/>
+
+            <LinearLayout android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="16dp"
+                android:layout_marginLeft="6dp">
+
+                <FrameLayout android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp">
+
+                    <ImageView android:layout_width="15dp"
+                        android:layout_height="15dp"
+                        android:src="@drawable/circle"
+
+                        android:layout_gravity="center"/>
+
+
+                    <TextView android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/white"
+                        android:textSize="9dp"
+                        android:text="2"
+                        android:layout_gravity="center"/>
+
+
+
+                </FrameLayout>
+
+                <ImageView android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:src="@drawable/cart" android:layout_marginTop="-3dp"
+
+                    android:layout_gravity="center"
+                    />
+            </LinearLayout>
+
+
+
+        </LinearLayout>
+
+
+        <LinearLayout android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#dfdfdf"></LinearLayout>
+
+        <android.support.design.widget.TabLayout
+            android:id="@+id/customTab"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#ffffff"
+            android:layout_alignParentBottom="true"
+            android:minHeight="?attr/actionBarSize"
+            android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+            app:tabIndicatorColor="@color/selected_tab_color"
+            app:tabIndicatorHeight="2dp"
+            app:tabSelectedTextColor="@color/selected_tab_color"
+            app:tabTextColor="@color/unselected_tab"
+            custom:tabSelectedTextColor="@color/selected_tab_color"
+            custom:tabTextColor="@color/unselected_tab"
+            app:tabTextAppearance="@style/MyMenuTextAppearance"
+            app:tabMode="fixed"/>
+
+
+        <LinearLayout android:layout_width="match_parent"
+            android:layout_height="3dp"
+            android:orientation="vertical"
+            android:background="@drawable/shadow"/>
+
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/pager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:layout_above="@+id/customTab"
+            android:background="#F5F6F8"/>
+
+    </LinearLayout>
+
+
+
+    <ImageView
+        android:id="@+id/btn"
+        android:layout_width="62dp"
+        android:layout_height="62dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="22dp"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/btn"/>
+</RelativeLayout>

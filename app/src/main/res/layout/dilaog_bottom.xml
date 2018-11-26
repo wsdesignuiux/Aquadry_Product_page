@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:custom="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+
+    <LinearLayout
+        android:id="@+id/linearDialog"
+        android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:orientation="vertical" android:layout_alignParentTop="true"
+                  android:layout_alignParentLeft="true" android:layout_alignParentStart="true">
+
+
+        <customfonts.Medium_Textview
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Pick up schedule"
+            android:textColor="#525252"
+            android:textSize="15dp"
+            android:padding="16dp" android:id="@+id/medium_Textview2"/>
+
+
+        <LinearLayout android:layout_width="match_parent"
+                      android:layout_height="1.5dp"
+        android:background="@color/divider"></LinearLayout>
+
+
+
+        <LinearLayout android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="16dp">
+
+        <customfonts.Regular_Textview
+            android:id="@+id/tvToday"
+            android:layout_width="wrap_content" android:layout_height="wrap_content"
+                  android:text="Today"
+                  android:textColor="@color/dark_blue"
+                  android:textSize="13dp"
+
+        android:background="@drawable/round_button_light"/>
+
+
+            <customfonts.Regular_Textview
+                android:id="@+id/tvTomorrow"
+                android:layout_width="wrap_content" android:layout_height="wrap_content"
+                      android:text="Tomorrow"
+                      android:textColor="@color/dark_blue"
+                      android:textSize="13dp"
+                      android:layout_marginLeft="16dp"
+                      android:background="@drawable/round_button_light"/>
+
+
+        </LinearLayout>
+
+        <LinearLayout android:layout_width="match_parent"
+                      android:layout_height="1.5dp"
+                      android:background="@color/divider"></LinearLayout>
+
+        <customfonts.Medium_Textview android:layout_width="wrap_content" android:layout_height="wrap_content"
+                  android:text="Available Time Slots"
+                  android:textColor="#525252"
+                  android:textSize="15dp"
+                  android:padding="16dp"/>
+
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/rvTimings"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+        android:clipToPadding="false"
+        android:paddingLeft="8dp"
+        android:paddingRight="8dp">
+
+
+        </android.support.v7.widget.RecyclerView>
+
+        <FrameLayout
+            android:id="@+id/frameOk"
+            android:layout_width="80dp"
+                     android:layout_height="wrap_content"
+                     android:layout_gravity="center"
+                     android:layout_marginTop="16dp"
+        >
+
+        <ImageView android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+        android:src="@drawable/halfcircle"
+                   android:scaleType="fitXY"
+
+        />
+
+            <customfonts.Regular_Textview android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+            android:text="OK"
+            android:textColor="@color/white"
+                      android:textSize="17dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="6dp"/>
+
+        </FrameLayout>
+
+    </LinearLayout>
+
+
+</RelativeLayout>
